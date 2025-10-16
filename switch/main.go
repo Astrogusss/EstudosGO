@@ -15,7 +15,7 @@ func DiasDaSemana(numero int) string{
 		return "quinta-feira"
 	case 5:
 		return "sexta-feira"
-	case 6:
+	case 6: 
 		return "sabado"
 	case 7:
 		return "domingo"
@@ -24,6 +24,22 @@ func DiasDaSemana(numero int) string{
 	}
 }
 
+//outro jeito de fazer switch case
+func NumeroParOuImpar(numero int) string{
+	switch{
+	case numero % 2 == 0:
+		return "é par"
+	case numero % 2 != 0:
+		return "não é par"
+	default:
+		return "entrada invalida"
+	}
+}
+
+//fallthrough isso faz com que é avalido no primeiro case, seja mandado para a proxima condicao sem ao menos ter verifiacado ela
+
+
 func main(){
 	fmt.Println(DiasDaSemana(10))
+	fmt.Println(NumeroParOuImpar(4))
 }
